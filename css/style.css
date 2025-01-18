@@ -8,9 +8,28 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    font-size: 96px;
+    text-transform: uppercase;
+}
+
+h2{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 30cm;
+}
+
+p {
+    color: white;
+}
+
 ul {
     
     text-align: left;
     margin: 0 auto;
 
+}
+
+a {
+    color: white;
 }
