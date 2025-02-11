@@ -31,7 +31,7 @@
 
 body {
     font-size: 87.5%; /* 14px */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     line-height: 1.3;
     color: rgba(0, 0, 0, .7);
 }
@@ -81,11 +81,12 @@ p {
 
 /* LINKS */
 a {
-    color: rgb(255, 97, 244);
+    color: rgb(79, 52, 255);
+    text-decoration: none;
 }
 
 a:hover {
-    color: rgb(205, 54, 195);
+    color: rgb(69, 3, 145);
 }
 
 /* HELPER CLASSES */
@@ -145,36 +146,48 @@ button{
 }
 
 body {
-    margin: 0em 0;
+    margin: 0;
 }
 
 /* CONTAINER */
 .container {
-    max-width: 1500px;
-    margin: 5em;
-    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* MEDIA QUERIES */
-/* @media (min-width: 768px) {
-      .container {
-        background-color: pink;
-      }
+/* SMALL- MEDIA QUERY (e.g. for mobile overrides) */
+@media (max-width: 767px) {
+  /* Inherits Small/Mobile Body Type from Above */
+  /* Inherits Small/Mobile Fluid Width from Above */
 }
-
+/* #MEDIUM+ MEDIA QUERY */
+@media (min-width: 768px) {
+  /* Inherits Small/Mobile Body Type from Above */
+  /* Inherits Small/Mobile Fluid Width from Above */
+}
+/* #LARGE+ MEDIA QUERY */
 @media (min-width: 1050px) {
-    .container {
-      background-color: rgb(246, 110, 183);
-    }
+  /* LARGE BODY TYPE */
+  body {
+    font-size: 100%;
+    /* 16px; */
+  }
+}
+/* #EXTRA-LARGE+ MEDIA QUERY */
+@media (min-width: 1250px) {
+  /* EXTRA-LARGE BODY TYPE */
+  body {
+    font-size: 112.5%;
+    /* 18px; */
+  }
+
+  /* FIXED WIDTH */
+  .container {
+    max-width: 1200px;
+  }
 }
 
-@media (min-width: 1250px) {
-    .container {
-      background-color: rgb(244, 57, 157);
-    }
-} */
-
-/* FOR DEMO PURPOSES ONLY */
+/* Grid */
 section,
 .container {
   overflow-x: hidden;
@@ -229,7 +242,7 @@ section,
 /* FOR DEMO PURPOSES ONLY */
 .demo .column {
   padding: 1em;
-  background: #ff40a6;
+  background: #ddd;
   text-align: center;
 }
 .demo .column p {
@@ -238,40 +251,96 @@ section,
   max-width: none;
 }
 
-.demo {
-  padding: 2em 0;
-}
+/* SITE STRUCTURE */
+/* .container {
+  border: 2px solid red;
+} */
 
-.demo:after {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  text-align: center;
-  width: 100%;
-  content: "Small (less than 768px)";
-  color: #fff;
-  background: #ed54a8;
+/* SITE HEADER */
+.site-header {
+  background-color:#e9bafa;
 }
-
 @media (min-width: 768px) {
-  body.demo:after {
-    content: "Medium (768px - 1049px)";
-    background: #fc85d8;
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.75em;
   }
 }
-@media (min-width: 1050px) {
-  body.demo:after {
-    content: "Large (1050px - 1249px)";
-    background: #ffbbf0;
+
+/* LOGO AREA */
+.site-id {
+  text-align: center;
+}
+.site-id h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  color: #999;
+  padding: 0.5em 0 0.4em 0;
+}
+.site-id h1 a {
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+/* SITE MAIN */
+.site-main {
+  background-color:#f63aab;
+}
+
+/* SITE FOOTER */
+.site-footer {
+  background-color:#f847cc;
+}
+.site-footer .container {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+@media (min-width: 768px) {
+  .site-footer .container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.5em;
   }
 }
-@media (min-width: 1250px) {
-  body.demo:after {
-    content: "Extra Large (1250px +)";
-    background: #ffdcf6;
-  }
+
+/* HERO */
+.container .hero {
+  position: relative;
+  top: 2em;
+  margin-bottom: 3em;
 }
-.demo .column p:last-child {
+.hero {
+  background-color: rgb(243, 167, 210);
+  border-top: none;
+  padding: 4em 1em 3em 1em;
+  margin-bottom: 1.5em;
+}
+.hero h1,
+.hero h2 {
+  font-size: 3em;
+  line-height: 1.1em;
+  max-width: 10em;
+}
+.hero p {
+  max-width: 22em;
+}
+.hero.text-centered h1,
+.hero.text-centered h2,
+.hero.text-centered h3,
+.hero.text-centered h4,
+.hero.text-centered h5,
+.hero.text-centered h6,
+.hero.text-centered p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero.full-width {
+  margin-top: 0;
   margin-bottom: 0;
 }
+
+/* #SITE NAVIGATION  */
