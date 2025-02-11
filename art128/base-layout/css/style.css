@@ -97,6 +97,34 @@ a:hover {
     width: 100%;
 }
 
+.text-centered {
+  text-align: center;
+}
+
+.full-width {
+  max-width: none;
+  width: 100%;
+}
+
+.horiz-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.subheader {
+  color: #999;
+  margin-top: 1em;
+  font-style: normal;
+  font-weight: normal;
+  clear: both;
+}
+
 /* IMAGES */
 img {
     max-width: 100%;
@@ -152,7 +180,7 @@ body {
 .container {
     max-width: 1500px;
     margin: 5em;
-    padding: 2em;
+    padding: 0.2em;
 }
 
 /* MEDIA QUERIES */
