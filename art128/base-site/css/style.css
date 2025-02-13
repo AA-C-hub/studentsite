@@ -1,32 +1,4 @@
 @charset "UTF-8";
-/* #BASE CSS (Initital Setup)
----------------------------------
-    #BASE CONTENT
-        #TYPOGRAPHY
-            #BODY
-            #HEADINGS
-            #PARAGRAPHS
-            #LINKS
-            #HELPERS
-        #MEDIA
-            #IMAGES
-        #COMPONENTS
-            #BUTTONS
-    #BASE LAYOUT
-        #SIMPLE RESET
-        #MEDIAQUERIES
-        #CONTAINER
-        #GRID SYSTEM
-    #BASE SITE
-        #SITE STRUCTURE
-            #HEADER
-                # site-id (LOGO)
-            #FOOTER
-            #SECTIONS
-            #SUB PAGES
-        #SITE NAVIGATION
-            #TOGGLE-NAV (Default for Small Screens)
---------------------------------- */
 /* #TYPOGRAPHY  */
 /* Reference
 	62.5%  => 10px
