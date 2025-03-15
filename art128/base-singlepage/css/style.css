@@ -678,10 +678,12 @@ main {
   animation-duration: 0.5s;
 }
 
-/* SECTION TITLE */
+/* CUSTOM SITE CSS */
 .section-title {
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  font-size: 3em;
 }
 
 .section-title::after {
@@ -692,15 +694,8 @@ main {
   border-bottom: 3px solid rgb(242, 78, 168)
 }
 
-.contact-section-title {
-  text-align: center;
-  margin-bottom: 3em;
-}
+/* .site-header.sticky{
+  position: fixed;
+  width: 100%;
+} */
 
-.contact-section-title::after {
-  content:"";
-  display: block;
-  width: 100px;
-  margin: .5em auto;
-  border-bottom: 3px solid rgb(242, 78, 168)
-}
