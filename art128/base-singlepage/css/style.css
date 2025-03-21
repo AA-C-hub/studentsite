@@ -616,9 +616,12 @@ article .date {
 }
 
 p.text {
-  text-align: center;
+  text-align: left;
 }
 
+h2 {
+  text-align: center;
+}
 /* FORMS */
 form {
   margin: 1.75em 0;
@@ -694,8 +697,16 @@ main {
   border-bottom: 3px solid rgb(242, 78, 168)
 }
 
-/* .site-header.sticky{
+.site-header.sticky{
   position: fixed;
   width: 100%;
-} */
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.site-header.sticky + .site-main {
+  padding-top: 3em;
+}
+
 
