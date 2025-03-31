@@ -5,8 +5,8 @@ body {margin: 0;}
 
 /* GLOBAL COLORS */
 body {color: rgba(0, 0, 0, 0.8);}
-a {color: rgb(248, 88, 136);}
-a:hover {color: rgb(249, 0, 75);}
+a {color: rgb(255, 101, 109);}
+a:hover {color: rgb(253, 97, 144);}
 
 /* GLOBAL TYPOGRAPHY */
 body {
@@ -209,7 +209,7 @@ dd {
 }
 
 .page-sub, .page-home {
-    background-color: rgb(192, 211, 105);
+    background-color: rgb(152, 174, 51);
     color: rgb(255, 255, 255);
 }
 
@@ -223,4 +223,67 @@ dd {
 .social-nav a {
     display: block;
     padding: 1em;
+}
+
+/* COURSES STYLING */
+.courses .cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 3em;
+    flex-wrap: wrap;
+    padding: 3em 0;
+    font-size: 0.875em;
+    line-height: 1.1
+}
+
+.courses .cards a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/736x/30/20/63/3020639b7622bafb7e51e14ee6de0004.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding: 2.5em 2em;
+    text-decoration: none;
+    
+}
+
+.courses ul{
+    margin: 0;
+    list-style: none;
+}
+
+.courses .cards span {
+    display: block;
+    font-size: 3em;
+}
+
+/* IMAGES */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* PROJECTS STYLING */
+.projects {
+    margin: 2em;
+    padding: 2em;
+    flex-basis: 30em;
+    background-image: url(https://i.pinimg.com/736x/07/56/c9/0756c9a35b89ded2eaf70b9c1a9212bf.jpg);
+    background-size: cover;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0 rgb(252, 136, 171);
+}
+
+.coursework h3{
+    color:rgb(152, 174, 51);
+}
+
+.coursework li {
+    color: rgb(136, 158, 40)
+}
+
+a, a:hover {
+    text-decoration: none;
 }
