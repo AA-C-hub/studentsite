@@ -69,6 +69,7 @@ section {
 footer {
     border-top: 1px solid rgba(0,0,0,.05);
     padding: 1em;
+    background-color: rgb(127, 142, 41);
 }
 
 /* LAYOUT */
@@ -209,7 +210,7 @@ dd {
 }
 
 .page-sub, .page-home {
-    background-color: rgb(152, 174, 51);
+    background-color: rgb(197, 215, 98);
     color: rgb(255, 255, 255);
 }
 
@@ -281,7 +282,7 @@ img{
 }
 
 .coursework li {
-    color: rgb(136, 158, 40)
+    color: rgb(136, 158, 40);
 }
 
 a, a:hover {
