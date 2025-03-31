@@ -128,7 +128,7 @@ aside {
 .hero {
     background-color: rgb(235, 77, 148);
     text-align: center;
-    color: rgb(170, 193, 102);
+    color: rgb(251, 92, 100);
     padding: 6em 1em;
 }
 
@@ -164,8 +164,8 @@ aside {
 
 /* SUB PAGES */
 .page-sub .hero {
-    background-color:rgb(235, 77, 148);
-    color: rgb(248, 209, 234);
+    background-color:rgb(241, 86, 104);
+    color: rgb(251, 208, 213);
 }
 
 /* COURSE WORK SECTION */
@@ -218,7 +218,7 @@ dd {
     background-image: url(https://i.pinimg.com/originals/47/a5/7d/47a57d2aa52a85dd19bb607eeeb1c51d.gif);
     background-size: cover;
     background-position: center;
-    padding: 25vh 1em;
+    padding: 24vh 2em;
 }
 
 .social-nav a {
@@ -287,4 +287,28 @@ img{
 
 a, a:hover {
     text-decoration: none;
+}
+
+.hero .intro {
+    margin: 3em;
+    padding: 3em;
+    flex-basis: 30em;
+    background-image: url(https://i.pinimg.com/736x/76/f6/df/76f6dfdeb069093322cf58918c456323.jpg);
+    background-size: cover;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0 rgb(255, 107, 151);
+}
+
+.hero h2, p {
+    color: rgb(255, 110, 117);
+}
+
+.hero .intro-art128, .intro-notes {
+    margin: 3em;
+    padding: 3em;
+    flex-basis: 30em;
+    background-image: url(https://i.pinimg.com/736x/3b/3f/8f/3b3f8f5678ea64da229c6560c034c831.jpg);
+    background-size: cover;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0 rgb(255, 107, 151);
 }
