@@ -245,7 +245,7 @@ dd {
     background-image: url(https://i.pinimg.com/736x/30/20/63/3020639b7622bafb7e51e14ee6de0004.jpg);
     background-size: cover;
     border-radius: 10px;
-    padding: 2.5em 2em;
+    padding: 4em 3em;
     text-decoration: none;
     
 }
@@ -312,3 +312,58 @@ a, a:hover {
     border-radius: 1em;
     box-shadow: 0 0 1em 0 rgb(255, 107, 151);
 }
+
+/* LAYOUT */
+/*
+#MEDIA QUERIES (Mobile First)
+	#DEFAULT+ (Mobile First - Default Settings in the CSS Above)
+	#SMALL- (Mobile Only Overrides) - max-width: 767px
+	#MEDIUM+ (Tablet) - min-width: 768px
+	#LARGE+ (Desktop) - min-width: 1050px
+	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
+/* SMALL+ (Mobile First Defaults) */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+  }
+  
+  /* SMALL- MEDIA QUERY (e.g. for mobile overrides) */
+  @media (max-width: 767px) {
+    /* Inherits Small/Mobile Body Type from Above */
+    /* Inherits Small/Mobile Fluid Width from Above */
+  }
+  /* #MEDIUM+ MEDIA QUERY */
+  @media (min-width: 768px) {
+    /* Inherits Small/Mobile Body Type from Above */
+    /* Inherits Small/Mobile Fluid Width from Above */
+  }
+  /* #LARGE+ MEDIA QUERY */
+  @media (min-width: 1050px) {
+    /* LARGE BODY TYPE */
+    body {
+      font-size: 100%;
+      /* 16px; */
+    }
+  }
+  /* #EXTRA-LARGE+ MEDIA QUERY */
+  @media (min-width: 1250px) {
+    /* EXTRA-LARGE BODY TYPE */
+    body {
+      font-size: 112.5%;
+      /* 18px; */
+    }
+  
+    /* FIXED WIDTH */
+    .container {
+      max-width: 1200px;
+    }
+  }
