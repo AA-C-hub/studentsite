@@ -193,6 +193,7 @@ hr {
 img {
   max-width: 100%;
   height: auto;
+  padding: inherit;
 }
 
 div.cup {
@@ -714,7 +715,6 @@ main {
 .section-title {
   font-family: "Amarante";
   text-align: center;
-  margin-bottom: 1em;
   font-size: 3em; 
   color:#454029;
 }
@@ -753,8 +753,8 @@ main {
   background-color: #B8AD7B;
 }
 
-.menu h2 {
-  color:#e8d1a1;
+.menu h2, .services h2 {
+  color:#fefefe;
 }
 
 /* SERVICES SECTION */
