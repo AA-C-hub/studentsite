@@ -571,7 +571,7 @@ section {
 .site-main .hero {
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(file:///Users/alyshacayabyab/Desktop/Github/studentsite/art128/sift-v1/img/coffee-lineup.jpg);
+  background-image: url(../img/coffee-lineup.jpg);
   border-top: none;
   padding: 24vh;
   margin-bottom: 1.5em;
