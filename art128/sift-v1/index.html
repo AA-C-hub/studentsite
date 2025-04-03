@@ -58,7 +58,7 @@
         <img src="img/coffee-cup1.png" alt="coffee cup" width="70" height="70">
         </div>
         <h2 class="section-title">How It Started</h2>
-        <img src="img/about-us.png" alt="two girls drinking coffee" width="1500" height="1500">
+        <img src="img/about-us.png" alt="two girls drinking coffee" width="1300" height="1300">
         <div class="about">
           <p>Sift Laureana Cafe, founded by Mr. Kristian Gildo Cayabyab, began as a passion project during the challenging times of the pandemic. On July 24, 2020, the cafe's journey started with a focus on online sales, offering a variety of delicious and unique cheesecakes, including the fan-favorite Maltesers Cheesecake in a jar, and the crowd-pleasing Ube Cream Cheese Pandesal. These distinctive offerings quickly gained popularity, capturing the attention of many dessert enthusiasts.</p>
 
@@ -75,16 +75,21 @@
             <img src="img/hanginglights.png" alt="hanging lights" width="1500" height="1500">
           
             <h2 class="section-title">Menu</h2>
-
-            <div class="container-menu">
-              <div class="menu1">
-                <img src="img/menu1.png" alt="First Menu" width="300" height="300">
-                <img src="img/menu2.png" alt="Second Menu" width="300" height="300">
+            <div class="row">
+              <div class="container-menu">
+                <div class="column-menu">
+                <div class="menu1">
+                  <img src="img/menu1.png" alt="First Menu" width="300" height="300">
+                  <img src="img/menu2.png" alt="Second Menu" width="300" height="300">
+                </div>
+                <div class="column-menu">
+                  <img src="img/menu3.png" alt="Third Menu" width="300" height="300">
+                  <img src="img/menu4.png" alt="Fourth Menu" width="300" height="300">
+                </div>
+                </div>
               </div>
-              <div class="menu3">
-                <img src="img/menu3.png" alt="Third Menu" width="300" height="300">
-                <img src="img/menu4.png" alt="Fourth Menu" width="300" height="300">
-              </div>
+            </div>
+              
           </div>
         </div>
     </section>
@@ -106,7 +111,7 @@
               <img src="img/cake-white.png" alt="cake icon" width="50" height="50">
               <h3>Custom Cakes</h3>
             <ul>
-              Wedding, Birthday, Graduation, etc.
+              Wedding, Birthdays, etc.
             </ul>
             </div>
             <div class="one-third column">
@@ -131,46 +136,55 @@
     </section>
     </section>
 
+    <section class="contact">
+      <section id="contact">
+        <div class="container">
+            <div class="row">
+              <div class="column-contact">
+                <img src="img/sift-logo2.png" alt="sift logo" width="300" height="300">
+                <div class="container-location">
+                  <h3>TAGUIG</h3>
+                  <li>G2MX+2Q9, Florence Wy, Taguig, 1630 Metro Manila, Philippines</li>
+                  <h3>ANTIPOLO</h3>
+                  <li>Brgy, 2F XentroMall Antipolo, Sumulong Hwy, City of Antipolo, 1870 Rizal, Philippines</li>
+                </div>                
+              </div> 
+              <div class="column-contact">
+                  <div class="container-contactbox">
+                    <h2 class="section-title-contact">Contact Us</h2>
+                    <div class="two-thirds column centered">
+                      <form>
 
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <h3 class="section-title">Contact Us</h3>
-          <!-- ::after -->
+                        <label for="contact_email">Email address:</label>
+                        <input class="text" type="text" value="" name="contact_email" id="contact_email">
 
-          <div class="two-thirds column centered">
-            <form>
-            <label for="contact_name">Name:</label>
-            <input class="text" type="text" value="" name="contact_name" id="contact_name">
+                        <label for="contact_message">Message</label>
+                        <textarea name="contact_message" id="contact_name"></textarea>
 
-            <label for="contact_email">Email address:</label>
-            <input class="text" type="text" value="" name="contact_email" id="contact_email">
+                        <input type="submit" value="submit">
 
-            <label for="contact_subject">Subject:</label>
-            <input class="text" type="text" value="" name="contact_subject" id="contact_subject">
-
-            <label for="contact_message">Message:</label>
-            <textarea name="contact_message" id="contact_name"></textarea>
-
-            <input type="submit" value="Submit">
-            
-            </form>
+                      </form>
+                    </div>
+                  </div>  
+              </div>
+            </div>  
           </div>
-      </div>
+      </section>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <nav class="site-nav">
-        <ul class="nav group">
-          <li><a class="scroll" href="#top">Home</a></li>
-          <li><a class="scroll" href="#about">About</a></li>
-          <li><a class="scroll" href="#services">Services</a></li>
-          <li><a class="scroll" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="footer-navbar">
+        <nav class="site-nav">
+          <ul class="nav group">
+            <li><a class="scroll" href="#top">Home</a></li>
+            <li><a class="scroll" href="#about">About</a></li>
+            <li><a class="scroll" href="#services">Services</a></li>
+            <li><a class="scroll" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <!-- END CONTAINER -->
   </footer>

@@ -29,7 +29,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+li {
   font-family: "Alata",Helvetica, Arial, sans-serif;
   margin: 0.5em 0;
   text-align: left;
@@ -76,6 +77,17 @@ h6 {
   margin-top: 5em;
 }
 
+li {
+  color:#fff;
+}
+
+.contact li {
+  color:#ECE0C6;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  padding-right: 5em;
+}
+
 /* #PARAGRAPHS */
 p {
   margin: 3em;
@@ -106,12 +118,12 @@ em {
 
 /* #LINKS */
 a {
-  color: rgb(242, 78, 168);
+  color:#fff;
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(165, 37, 146);
+  color:#A3664B;
   text-decoration: underline;
 }
 
@@ -265,11 +277,26 @@ body {
   margin: 0;
 }
 
- .container {
+ .container,
+ .container-location,
+ .container-contactbox {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 4%;
 }  
+
+.container-location {
+  padding-top: 4em;
+}
+
+.container-contactbox {
+  padding-top: 5.5em;
+}
+
+.container-menu {
+  align-items: center;
+  margin: auto;
+}
 
 
 /* SMALL- MEDIA QUERY (e.g. for mobile overrides) */
@@ -289,6 +316,8 @@ body {
     font-size: 100%;
     /* 16px; */
   }
+
+
 }
 /* #EXTRA-LARGE+ MEDIA QUERY */
 @media (min-width: 1250px) {
@@ -310,6 +339,64 @@ body {
 } */
 
 @media (min-width: 768px) {
+  .row {
+    margin-left: -2%;
+    margin-right: -2%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.swapped {
+    flex-direction: row-reverse;
+  }
+  .row.centered {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row > .column {
+    margin: 0 2% 2% 2%;
+    flex-grow: 1;
+  }
+  .row > .column.one-half {
+    max-width: 46%;
+  }
+  .row > .column.one-third {
+    max-width: 29.3333%;
+    align-content: center;
+  }
+  .row > .column.two-thirds {
+    max-width: 62.6666%;
+  }
+  .row > .column.one-fourth {
+    max-width: 21%;
+  }
+  .row > .column.three-fourths {
+    max-width: 71%;
+  }
+  .row > .column.push-one-third {
+    margin-left: 35.3333%;
+  }
+  .row > .column.push-one-fourth {
+    margin-left: 27%;
+  }
+  .row > .column.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .column-contact {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media (min-width: 1250px) {
   .row {
     margin-left: 2%;
     margin-right: -2%;
@@ -334,6 +421,7 @@ body {
   }
   .row > .column.one-third {
     max-width: 29.3333%;
+    margin-left: 43px;
   }
   .row > .column.two-thirds {
     max-width: 62.6666%;
@@ -351,8 +439,18 @@ body {
     margin-left: 27%;
   }
   .row > .column.centered {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 50%;
+    margin-right: inherit;
+  }
+  .column-contact {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }
 /* FOR DEMO PURPOSES ONLY */
@@ -375,11 +473,11 @@ body {
 /* Header & Footer */
 .site-header a,
 .site-footer a {
-  color: #333;
+  color:#ffffff;
 }
 .site-header a:hover,
 .site-footer a:hover {
-  color: rgb(148, 2, 73);
+  color:#A3664B;
   text-decoration: none;
 }
 
@@ -419,7 +517,7 @@ body {
 
 /* Footer Only */
 .site-footer {
-  background: #fff;
+  background-color:#6F6848;
   border-top: 0px solid #ccc;
 }
 .site-footer .container {
@@ -477,7 +575,7 @@ section {
 .hero.text-centered h5,
 .hero.text-centered h6,
 .hero.text-centered p {
-  margin-left: 20%;
+  margin-left: 10%;
   margin-right: 8%;
   text-align: left;
 }
@@ -566,9 +664,15 @@ section {
   }
 }
 /* Default Site-Navigation (footer only) */
-.site-footer .site-nav ul {
+.site-footer .site-nav .social-nav ul {
   border-top: none;
   margin: 0;
+}
+
+.site-footer .footer-navbar{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 /* TOGGLE NAV */
@@ -719,6 +823,14 @@ main {
   color:#454029;
 }
 
+.section-title-contact {
+  font-family: "Amarante";
+  text-align: center;
+  font-size: 3em; 
+  color:#ECE0C6;
+}
+
+
 .section-title::after {
   content:"";
   display: block;
@@ -763,4 +875,6 @@ main {
   align-content: center;
 }
 
-
+.contact {
+  background-color:#454029;
+}
