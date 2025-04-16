@@ -40,7 +40,7 @@ h1 {
   font-size: 4em;
   /* 48px / 16px = 3em */
   line-height: 1;
-  font-family: "Aladin";
+  font-family: "Federo";
 }
 
 h2 {
@@ -797,7 +797,7 @@ form label {
 
 form input,
 form textarea {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Alata", Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.15em;
   display: block;
@@ -847,14 +847,14 @@ main {
 
 /* CUSTOM SITE CSS */
 .section-title {
-  font-family: "Aladin";
+  font-family: "Federo";
   text-align: center;
   font-size: 3em; 
   color:#454029;
 }
 
 .section-title-contact {
-  font-family: "Aladin";
+  font-family: "Federo";
   text-align: center;
   font-size: 3em; 
   color:#ECE0C6;
