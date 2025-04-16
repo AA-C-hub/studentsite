@@ -77,27 +77,35 @@ h6 {
   margin-top: 5em;
 }
 
+/* LIST */
+ul {
+  margin: 0;
+  padding: 0 0 1em 1em;
+}
+
 li {
   color:#fff;
+  margin: 0;
+  padding: 0;
 }
 
 .contact li {
   color:#ECE0C6;
-  padding-top: 10px;
+  /* padding-top: 10px;
   padding-bottom: 50px;
-  padding-right: 5em;
+  padding-right: 5em; */
 }
 
 /* #PARAGRAPHS */
 p {
-  margin: 3em;
+  margin: 3em 0;
   max-width: 38em;
   text-align: left;
 }
 
 .centered p {
-  margin-left: 4em;
-  margin-right: 4em;
+  margin-left: auto;
+  margin-right: auto;
   align-content: center;
 }
 
@@ -305,7 +313,14 @@ body {
    padding: 0 4%;
  } 
 
+ .hero .container {
+  max-width: 600px;
+  padding: 3em 0 0 0;
+ }
+
 }
+
+
 /* #LARGE+ MEDIA QUERY */
 @media (min-width: 1050px) {
   /* LARGE BODY TYPE */
@@ -552,21 +567,14 @@ section {
 }
 
 /* Hero Sections */
-.container .hero {
-  position: relative;
-  top: 2em;
-  margin-bottom: 3em;
-  max-width: 1000px;
-  margin: 0 auto;
-}
 
 .site-main .hero {
   background-size: cover;
   background-position: 50% 50%;
   background-image: url(../img/coffee-lineup.jpg);
   border-top: none;
-  padding: 24vh;
-  margin-bottom: 1.5em;
+  /* padding: 24vh;
+  margin-bottom: 1.5em; */
 }
 .hero h1,
 .hero h2 {
@@ -577,17 +585,7 @@ section {
 .hero p {
   max-width: 22em;
 }
-.hero.text-centered h1,
-.hero.text-centered h2,
-.hero.text-centered h3,
-.hero.text-centered h4,
-.hero.text-centered h5,
-.hero.text-centered h6,
-.hero.text-centered p {
-  margin-left: 10%;
-  margin-right: 8%;
-  text-align: left;
-}
+
 .hero.full-width {
   margin-top: 0;
   margin-bottom: 0;
