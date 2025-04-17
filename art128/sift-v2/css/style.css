@@ -117,9 +117,16 @@ em {
   font-style: italic;
 }
 
-.about, .info{
+.info{
   margin: auto;
   width: 80%;
+  padding: inherit;
+}
+
+.about {
+  margin: auto;
+  width: fit-content;
+  /* border: 3px solid green; */
   padding: inherit;
 }
 
@@ -888,6 +895,11 @@ main {
 
 .about p{
   color:#454029;
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
 }
 
 /* MENU SECTION */
