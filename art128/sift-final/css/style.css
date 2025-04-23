@@ -522,7 +522,11 @@ body {
 .site-header {
   background: #fff;
   border-bottom: 0px solid #ccc;
-  padding: 0.5em 4%;
+  padding: 0.5em 4% 0.75em 4%;
+}
+.site-header .container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* ON LARGER SCREENS PLACE LOGO LEFT AND NAV RIGHT */
@@ -741,6 +745,7 @@ section {
   }
   .toggle-nav[data-navstate="closed"] ul {
     height: 0;
+    padding: 0;
     overflow: hidden;
   }
   .toggle-nav[data-navstate="open"] {
@@ -750,9 +755,10 @@ section {
   /* NAVICON */
   .toggle-nav .site-nav .menu-button.navicon {
     border: none;
-    color:rgba(255,255,255,0);
+    color:rgba(255,255,255,1);
     
   }
+  
   .toggle-nav .site-nav .menu-button.navicon::after {
     content: "\2630";
     display: inline-block;
