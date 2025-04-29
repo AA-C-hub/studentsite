@@ -629,8 +629,8 @@ section {
 }
 
 .fadeandscaleIn *:nth-child(1) { animation-delay: 0s;}
-.fadeandscaleIn *:nth-child(2) { animation-delay: 1s;}
-.fadeandscaleIn *:nth-child(3) { animation-delay: 1.25s;}
+.fadeandscaleIn *:nth-child(2) { animation-delay: 0.5s;}
+.fadeandscaleIn *:nth-child(3) { animation-delay: 1s;}
 
 /* #SITE NAVIGATION  */
 /* Default Site-Navigation Menu (both header & footer) */
