@@ -612,6 +612,26 @@ section {
   margin-bottom: 0;
 }
 
+@keyframes fadeandscaleIn {
+  0% {
+    transform: scale(.8);
+    opacity: 0; 
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fadeandscaleIn * {
+  animation: fadeandscaleIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.fadeandscaleIn *:nth-child(1) { animation-delay: 0s;}
+.fadeandscaleIn *:nth-child(2) { animation-delay: 1s;}
+.fadeandscaleIn *:nth-child(3) { animation-delay: 1.25s;}
+
 /* #SITE NAVIGATION  */
 /* Default Site-Navigation Menu (both header & footer) */
 .site-nav {
@@ -922,6 +942,7 @@ main {
   justify-content: center;
 }
 
+
 /* MENU SECTION */
 .menu {
   background-color: #B8AD7B;
@@ -939,24 +960,49 @@ main {
 }
 
 .coffee {
-  transform: translateY(80px);
+  /* transform: translateY(80px);
   display: flex;
-  justify-content: center;
+  justify-content: center; */
+  height: 140px;
+  background-image: url(../img/coffee-cup1.png);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  translate: 0 60%;
+  background-position: center;
 }
 
 .lights{
   transform: translateY(-50px);
   margin: auto;
-  padding: 0.17em 0 0 0;
+  padding: 1em 0 0 0;
 }
 
+.onscroll-fadein {
+  animation: fade-in both linear;
+  animation-timeline: view();
+  animation-range: entry 0% contain 50%;
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
+.onscroll-movein-fromleft {
+  animation: movein-fromleft both linear;
+  animation-timeline: view();
+  animation-range: entry 0% contain 50%;
+}
+@keyframes movein-fromleft {
+  0% { translate: -50px; opacity: 0; }
+  100% { translate: 0; opacity: 1; }
+}
 
 
 /* SERVICES SECTION */
 .services{
   background-color: #A3664B;
   align-content: center;
+  padding-top: 6em;
 }
 
 .contact {
