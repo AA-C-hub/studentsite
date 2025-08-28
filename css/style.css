@@ -266,6 +266,11 @@ img{
     height: auto;
 }
 
+.courses img {
+    padding: 1em;
+    margin: 0 auto;
+}
+
 /* PROJECTS STYLING */
 .projects {
     margin: 2em;
