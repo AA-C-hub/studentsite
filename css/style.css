@@ -372,3 +372,10 @@ a, a:hover {
       max-width: 1200px;
     }
   }
+
+  /* LINKS */
+  a[href="#"] {
+    color: #798242;
+    text-decoration: none;
+    cursor: default;
+}
