@@ -1,0 +1,812 @@
+/* MAIN CSS GOES HERE */
+
+/* 
+TABLE OF CONTENTS
+
+# GLOBAL
+    # DEFINE GLOBAL VARIABLES (CUSTOM PROPERTIES)
+    # SET GLOBAL COLORS
+    # GLOBAL TYPOGRAPHY
+    # GLOBAL MEDIA (eg Images)
+    # GLOBAL HELPERS
+    # GLOBAL RESETS
+
+# LAYOUT
+    # CONTAINER
+    # GRID (ROWS & COLUMNS)
+
+# PAGE STRUCTURE (BASE TEMPLATE)
+    # HEADER
+        # SITE LOGO
+        # SITE NAV
+            # TOGGLE-NAV
+    # MAIN
+        # SECTIONS
+    # FOOTER
+
+# UI COMPONENTS
+    #CARDS
+    # BUTTONS
+    # HR (HORIZONTAL RULES)
+    # CODE BLOCKS
+    # SWIPER SLIDER CAROUSEL
+
+# ANIMATION
+    # SMOOTH SCROLLING
+
+# CUSTOM SITE STYLING (OPINIONATED)
+    # BODY GRID LAYOUT SYSTEM (header, main, and footer)
+    # CUSTOM TYPE BLOCK/SPECIMEN
+
+# ANIMATIONS
+    # SCALE AND FADE IN
+    # SCROLL TRIGGER ANIMATIONS
+
+*/
+
+
+
+/* GLOBALS */
+
+/* DEFINE GLOBAL VARIABLES */
+
+:root{
+
+    /* DEFINE COLORS */
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-grey-200: rgb(0 0 0 / .2);
+
+    --color-light-blue: hsl(201, 52%, 84%);
+
+    --color-pink: #C1006F;
+    --color-pink-50: hsl(340, 80%, 95%);
+    --color-pink-100: hsl(340, 80%, 90%);
+    --color-pink-400: hsl(340, 80%, 70%);
+    --color-pink-900: hsl(340, 80%, 40%);
+    --color-pink-about: #C1006F;
+
+    --color-purple: hsl(262, 35%, 50%);
+    --color-purple-100: hsl(262, 35%, 60%);
+    --color-purple-400: hsl(262, 35%, 40%);
+    --color-purple-900: hsl(262, 35%, 30%);
+    --color-purple-bottom: #6A59CE;
+
+    --color-orange: #F67C45;
+
+    --color-teal: #288B74;
+
+    --color-yellow: hsl(48, 100%, 50%);
+
+    /* SET SEMANTIC COLORS */
+    --color-body-background: var(--color-yellow);
+    --color-body-text: var(--color-purple);
+    --color-body-text-dark: var(--color-purple-400);
+    --color-background-main: var(--color-orange);
+    --color-background-about: var(--color-pink-about);
+    --color-background-merch: var(--color-teal);
+    --color-background-bottom: var(--color-purple-bottom);
+
+
+    --color-primary: var(--color-pink-900);
+    --color-secondary: var(--color-purple-400);
+    --color-secondary-hover: var(--color-purple-900);
+
+    /* ACTION COLORS */
+    --color-links: var(--color-purple-400);
+    --color-links-hover: var(--color-purple-900);
+
+    --color-hero-background: var(--color-pink-100);
+    --color-header-background: var(--color-pink-400);
+    --color-footer-background: var(--color-pink-100);
+
+    --color-border: var(--color-grey-200);
+
+    /* BORDER */
+    --color-border: var(--color-grey-200);
+    --border-radius: 5px;
+    --border-thickness: .5px;
+
+    /* SIZING UNITES */
+    --unit-s: 1em;
+    --unit-m: 2em;
+    --unit-l: 3em;
+    --unit-xl: 4em;
+    --unit-xxl: 5em;
+    --unit-gutter: 1.5em;
+    --container-width: 1200px;
+
+    /* GLOBAL TYPOGRAPHY */
+    --font-body: Helvetica, arial, sans-serif;
+    --font-headings: Georgia, Times, serif;
+}
+
+/* SET GLOBAL COLORS */
+
+body {
+    background-color: var(--color-body-background);
+    color: var(--color-body-text);
+}
+
+main {
+    background-color: var(--color-body-background);
+}
+
+h1, h2, h3{
+    color: var(--color-body-text-dark);
+    text-wrap: balance;
+}
+
+/* REMOVES WIDOWS */
+p{
+    text-wrap: pretty;
+}
+
+/* LINKS */
+a{
+    color: var(--color-links);
+    text-decoration-color: var(--color-primary-dark);
+    text-underline-offset: .2em;
+    text-decoration-thickness: .05em;
+}
+
+a:hover{
+    color: var(--color-links-hover);
+}
+
+/* GLOBAL TYPOGRAPHY */
+body{
+    font-family: var(--font-body);
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--font-headings);
+}
+
+/* GLOBAL MEDIA */
+
+/* IMAGES
+    Responsive on small screens Do not stretch too large (beyond the original
+    on large screens */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* GLOBAL HELPERS */
+
+.text-center{
+    text-align: center;
+}
+
+/* CENTER PARAGRAPHS INSIDE CENTERED PARENTS */
+.text-center p{
+    margin-inline: auto;
+    max-width: 600px;
+}
+
+/* HIDE CONTENT VISUALLY (BUT KEEP FOR SEO AND ACCESSIBILITY) */
+.hide-visually,
+.visually-hidden,
+.screen-reader-only{
+    position:absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* GLOBAL RESETS */
+
+/* Remove the default 8pm margin on body */
+body{
+    margin: 0;
+}
+
+/* Set all elements to box sizing border box */
+* {box-sizing: border-box;}
+
+/* SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ADD OFFSET TO ALL INLINE ANCHOR LINKS */
+:target {
+    scroll-margin-top: var(--unit-s);
+}
+
+/* LAYOUT */
+/* CONTAINER */
+.container{
+    /* max-width: 1200px; */
+    margin-inline: auto;
+    /* padding-inline:var(--unit-s); */
+}
+
+/* GRID SYSTEM (12 COLUMN) */
+
+.row {
+    --grid-gap: var(--unit-s);
+}
+
+.row > * {
+    margin-block-end: var(--grid-gap);
+}
+
+/* NEW WIDTH SYNTAX */
+@media ( width >= 768px) {
+    .row{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--grid-gap);
+    }
+
+    /* SEMANTIC COLUMNS */
+    .one-half {
+        grid-column: auto / span 6;
+    }
+
+    .one-third {
+        grid-column: auto / span 4;
+    }
+    .two-thirds {
+        grid-column: auto / span 8;
+    }
+    .one-fourth {
+        grid-column: auto / span 3;
+    }
+    .three-fourths {
+        grid-column: auto / span 9;
+    }
+
+    /* SWAPS (REVERSE COLUMNS) - WORKS ONLY W/ 2 COLUMNS*/
+    .row.swapped > *:first-child {order: 2;}
+    .row.swapped > *:last-child {order: 1;}
+
+
+    /* CENTERED COLUMNS */
+    .one-half.centered{ grid-column-start: 4;}
+    .two-thirds.centered{ grid-column-start: 3;}
+
+    /* 12 COLUMN CLASS-BASED GRID SYSTEM */
+    .col-1 {grid-column: auto / span 1;}
+    .col-2 {grid-column: auto / span 2;}
+    .col-3 {grid-column: auto / span 3;}
+    .col-4 {grid-column: auto / span 4;}
+    .col-5 {grid-column: auto / span 5;}
+    .col-6 {grid-column: auto / span 6;}
+    .col-7 {grid-column: auto / span 7;}
+    .col-8 {grid-column: auto / span 8;}
+    .col-9 {grid-column: auto / span 9;}
+    .col-10 {grid-column: auto / span 10;}
+    .col-11 {grid-column: auto / span 11;}
+    .col-12 {grid-column: auto / span 12;}
+
+    /* PUSHES */
+    .push-1 { grid-column-start:1;}
+    .push-2 { grid-column-start:2;}
+    .push-3 { grid-column-start:3;}
+    .push-4 { grid-column-start:4;}
+    .push-5 { grid-column-start:5;}
+    .push-6 { grid-column-start:6;}
+    .push-7 { grid-column-start:7;}
+    .push-8 { grid-column-start:8;}
+    .push-9 { grid-column-start:9;}
+    .push-10 { grid-column-start:10;}
+    .push-11 { grid-column-start:11;}
+    .push-12 { grid-column-start:12;}
+}
+
+/* FOR DEMO PURPOSES ONLY */
+.row.demo > * {
+    background-color: var(--color-light-blue);
+    text-align: center;
+    padding: var(--unit-s);
+}
+
+/* SITE STRUCTURE */
+
+/* HEADER */
+.site-header {
+    background-color: var(--color-header-background);
+    padding-block: var(--unit-s);
+    padding-inline: var(--unit-s);
+
+    /* DISPLAY LOGO ON LEFT AND NAV ON RIGHT */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+/* LOGO STYLING */
+.site-header .logo{
+    display: flex;
+    align-items: center;
+    gap: var(--unit-s);
+}
+
+.site-header .logo img{
+    max-height: 60px;
+    min-width: 60px;
+    vertical-align: middle;
+}
+
+.site-header .logo h1 {
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+.site-header .logo a{
+    text-decoration: none;
+}
+
+/* SITE NAV */
+.site-header {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: var(--unit-s);
+    flex-wrap: wrap;
+}
+
+.site-header{
+    text-decoration: none;
+    font-weight: bold;
+    padding: .5em;
+    color: var(--color-purple-900);
+}
+
+/* MENU BUTTON */
+.site-nav .menubutton{
+    position: relative;
+    z-index: 100;
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    padding: .5em;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+  }
+
+  .site-nav ul{
+    display:flex;
+    list-style:none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* SHOW MENU BUTTON ON SMALL SCREENS */
+.site-menu .menubutton { display: block; }
+.site-nav ul { display: none; }
+
+/* BIG SCREENS:  HIDE MENU BUTTON, SHOW NAV*/
+@media ( width >= 768px ) {
+    .site-nav .menubutton { display: none; }
+    .site-nav ul { 
+        display: flex; 
+        transform: translateY(10px);
+    }
+}
+
+/* SMALL SCREENS ONLY: ENABLE OVERLAY NAV */
+@media ( width < 768px ) {
+
+    .site-nav[data-menustate] ul {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--color-purple-900);  
+        transition: all 0.3s ease-out; 
+    }
+    .site-nav[data-menustate] a {
+        color: var(--color-white);
+    }
+
+    .site-nav[data-menustate="open"] ul {
+        translate: 0 0;
+    }
+
+    .site-nav[data-menustate="closed"] ul {
+        translate: 100% 0;
+    }
+   
+    /* ENABLE SVG ANIMATION */
+    .site-nav[data-menustate] .simple-navicon rect {
+        transition:  all 0.3s ease-out;
+    }
+    /* CHANGE COLOR OF SVG NAV ICON WHEN MENU IS OPEN */
+    .site-nav[data-menustate="open"] .simple-navicon rect {
+        fill: var(--color-white);
+    }
+    /* ANIMATE NAV ICON LINES TO AN X WHEN OPEN */
+    .site-nav .simple-navicon{
+        display: block;
+    }
+    .site-nav .simple-navicon rect{
+        transform-origin: center;
+        width: 100%;
+    }
+    
+    .site-nav[data-menustate="open"] .simple-navicon-top {
+        rotate: 45deg;
+        translate: -21% 24%;
+    }
+    .site-nav[data-menustate="open"] .simple-navicon-middle {
+        opacity: 0;
+    }
+    .site-nav[data-menustate="open"] .simple-navicon-bottom {
+        rotate: -45deg;
+        translate: -21% -24%;
+    }
+    
+}
+
+/* REMOVE WIDE SCROLLBAR WHEN DRAWER IS CLOSED */
+/* .site-nav{
+    overflow-x: hidden;
+} */
+
+/* MOVE THE CLOSED STATE OF THE NAV TO FIX RESIZE BUG */
+
+
+/* SITE MAIN */
+.site-main {
+    /* EMPTY FOR NOW */
+    background-color: transparent;
+}
+
+section {
+    padding-block: var(--unit-l);
+}
+
+.hero{
+    background-color: var(--color-hero-background);
+    padding-block: var(--unit-xxl);
+    padding-inline: var(--unit-s);
+}
+
+.hero:has(.container){
+    padding-inline: 0;
+}
+
+
+/* FOOTER */
+.site-footer{
+    background-color: var(--color-footer-background);
+    padding: var(--unit-s);
+
+}
+
+/* REMOVE FOOTER PADDING IF IT HAS A CONTAINER */
+.site-footer:has(.container0){
+    padding-inline: 0;
+}
+
+/* UI COMPONENTS */
+
+/* CARDS */
+
+.card {
+    border: var(--color-border) 1px solid;
+    display: inline-block;
+    padding: var(--unit-s);
+    border-radius: 5px;
+}
+
+.color-swatch {
+    --_swatch-color: grey;
+    background-color: var(--_swatch-color);
+    width: 150px;
+    height: 150px;
+}
+
+/* BUTTONS */
+.button{
+    background-color: var(--color-links);
+    color:#fff;
+    padding: var(--unit-s);
+    text-decoration: none;
+    display: inline-block;
+    margin-block: var(--unit-s);
+    border-radius: var(--border-radius);
+}
+
+.button:hover{
+    background-color: var(--color-links-hover);
+    color: var(--color-white);
+}
+
+
+
+/* HR */
+
+hr{
+    border: none;
+    border-top: var(--border-thickness) solid var(--color-border);
+    margin: var(--unit-m) 0;
+}
+
+/* CODE BLOCKS */
+pre:has(code){
+    background-color: var(--color-pink-50);
+    padding: var(--unit-s);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    border-radius: var(--border-radius);
+}
+
+/* SWIPER CSS CODING */
+.swiper {
+    padding-block-end: 2rem;
+    text-align: center;
+}
+
+
+.swiper-wrapper {
+}
+
+/* MOVE SWIPER ARROWS OUTSIDE OF SWIPER */
+.swiper-button-prev, 
+.swiper-button-next {
+    background-color: var(--color-white);
+    padding: var(--unit-xs);
+    border-radius: 100%;
+}
+
+/* TEMP WAY TO MOVE ARROWS OUTSIDE OF SWIPER */
+.swiper {
+    padding-inline: 50px;
+}
+.swiper-button-prev {
+    translate: -4px -50%;
+    background-color: white;
+    height: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+}
+.swiper-button-next {  
+    translate: 4px -50%;
+    background-color: white;
+    height: 100%;
+    border-radius: 0;
+    top: 0;
+    right: 0;
+}
+
+/* REMOVE COLOR CARD WIDTHS AND HEIGHTS WHEN INSIDE A SWIPER SLIDE */
+.swiper-slide .card {
+    display: block;
+}
+.swiper-slide .color-swatch {
+    width: 100%;
+    min-height: 150px;
+}
+
+/* CUSTOM SITE STYLING */
+
+/* PUSH THE FOOTER TO THE BOTTOM BY DEFAULT */
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100svh;
+}
+
+/* TO FIX OVERFLOW WORD BREAK */
+body > *{
+    min-width: 0;
+}
+
+/* NUDGE THE NAV ITEMS DOWN TO ALIGN W IMAGE LOGO TEXT */
+.site-header .site-nav a{
+    padding-block-start: calc(var(--unit-xs) + .35em);
+}
+
+/* CUSTOM HERO STYLING */
+.hero h1{
+    font-size: 4em;
+    font-size: clamp(2.5em, 5vw, 4em);
+    margin-block: 0;
+    overflow-wrap: break-word;
+}
+
+.hero p{
+    text-wrap: pretty;
+}
+
+/* CUSTOME PAGE LAYOUT - 2COLUMNS WITH AN ASIDE + MAIN CONTENT */
+
+@media ( width >= 768px) {
+   
+    .pagelayout-wrapper-twocolumn{
+        display: flex;
+        gap: var(--unit-l);
+    }
+
+    .pagesection-aside{
+        width: 25%
+    }
+
+    .pagesection-maincontent{
+        width: 75%
+    }
+
+}
+
+/* STICKYBOX */
+/* SET INSIDE OF A MEDIA QUERY SO IT ALLOWS THE OVERLAY MENU TO RENDER ON TOP OF SMALL SCREENS */
+@media ( width >= 768px) {
+    .stickybox{
+        position: sticky;
+        top: var(--unit-s);
+    }
+}
+
+/* SKG TYPE BLOCK */
+.skg-eyebrow{
+    font-size: .875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: .5;
+}
+
+.skg-headline{
+    font-size: 2rem;
+    margin-block: var(--unit-s);
+}
+
+.skg-subheadline{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-block: var(--unit-s);
+    opacity: .8;
+}
+
+/* ANIMATIONS */
+
+.slide-from-top-fade-in {
+    animation-name: skg-slide-from-top-fade-in;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0,1,0,1);
+    opacity: 1;
+}
+
+@keyframes skg-slide-from-top-fade-in {
+  
+    0% {
+        opacity: 0;
+        translate: 0 -20px;
+    }
+    100% {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+.slide-from-left-and-fade-in {
+    animation-name: skg-slide-from-left-and-fade-in;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0,1,0,1);
+    opacity: 0;
+    translate: -40px 0;
+}
+
+@keyframes skg-slide-from-left-and-fade-in {
+  
+    0% {
+        opacity: 0;
+        translate: -40px 0;
+    }
+    100% {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+.delay-1{ animation-delay: .1s;}
+.delay-2{ animation-delay: .2s;}
+.delay-3{ animation-delay: .3s;}
+.delay-4{ animation-delay: .4s;}
+.delay-5{ animation-delay: .5s;}
+.delay-6{ animation-delay: .6s;}
+
+/* SCROLL TRIGGER ANIMATIONS */
+
+/* FIX SCROLL BAR ON ALL ANIMATION SECTIONS */
+section:has(observe-me){
+    overflow-x: clip;
+}
+
+/* ONSCROLL FADE IN */
+.observe-me.onscroll-slide-in-from-left {
+    opacity: 0;
+    translate: -40px 0;
+    transition: all .5s ease-out;
+}
+  .observe-me[data-viewstate="active"].onscroll-slide-in-from-left {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+/* RIGHT */
+  .observe-me.onscroll-slide-in-from-right {
+    opacity: 0;
+    translate: 20px 0;
+    transition: all .5s ease-out;
+}
+  .observe-me[data-viewstate="active"].onscroll-slide-in-from-right {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  .observe-me.delay-0{ transition-delay: 0s;}
+    .observe-me.delay-1{ transition-delay: .1s;}
+    .observe-me.delay-2{ transition-delay: .2s;}
+    .observe-me.delay-3{ transition-delay: .3s;}
+    .observe-me.delay-4{ transition-delay: .4s;}
+    .observe-me.delay-5{ transition-delay: .5s;}
+
+/* SKG CONTENT */
+
+/* --MAIN FOLDER-- */
+.main{
+    background-color: var(--color-background-main);
+}
+
+.main img{
+    /* border: 1px solid red; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --ABOUT FOLDER-- */
+.about {
+    background-color: var(--color-background-about);
+}
+
+.paper{
+    /* border: 1px solid red; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(1.38%);
+}
+
+/* --MERCH FOLDER-- */
+.merch {
+    background-color: var(--color-background-merch);
+}
+
+.merch img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --WHAT FOLDER-- */
+.what {
+    background-color: var(--color-background-bottom);
+}
+
+
+
+
+
