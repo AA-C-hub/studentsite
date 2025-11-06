@@ -16,46 +16,51 @@
 </head>
 <body>
 
-    <header class="skg-header">
-        <nav class="tabs">
-            <ul>
-                <li><a href="#section1">LOGO</a></li>
-                <li><a href="#section2">About</a></li>
-                <li><a href="#section3">Merch</a></li>
-                <li><a href="#section4">@ & ?</a></li>
-            </ul>
-        </nav>
-    </header>
 
-
-<main>
+<main class="site-main">
 
     <section>
-    
-                    <section class="main" id="section1">
+        <div class="container">
+
+            <!-- 2 COLUMN PAGE LAYOUT ASIDE+MAIN CONTENT -->
+
+            <div class="pagelayout-wrapper-twocolumn">
+
+                <div class="pagesection-aside">
+
+                    <div class="stickybox">
+                        <nav class="tabs">
+                            <ul>
+                                <li><a href="#main">Main</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#merch">Merch</a></li>
+                                <li><a href="#what">What</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="pagesection-maincontent">
+                    <section class="main" id="main">
                         <div class="container">
                             <img src="img/main-hero-img.png" alt="main-img" width="700" height="700">
                     </section>
                     
-                        <section class="about" id="section2">
+                        <section class="about" id="about">
                             <div class="div container">
-                                <img class="paper" src="img/about-content.png" alt="about content" width="950" height="950">
+                                <img class="paper" src="img/about-content.png" alt="about content" width="1000" height="1000">
                             </div>
                         </section>
                     
                     
-                        <section class="merch" id="section3">
+                        <section class="merch" id="merch">
                             <div class="div container">
-                                <img class="head-merch" src="img/heading-merch.png" alt="heading-merch" width="600" height="150">
-                                <img class="merch1" src="img/merch1.png" alt="merch1" width="350" height="350">
-                                <img class="merch2" src="img/merch2.png" alt="merch2" width="350" height="350">
-                                <img class="merch3" src="img/merch3.png" alt="merch3" width="380" height="380">
-                                <img class="merch4" src="img/merch4.png" alt="merch4" width="350" height="350">
-                                <img class="merch5" src="img/merch5.png" alt="merch5" width="390" height="390">
+                                <img src="img/heading-merch.png" alt="heading-merch" width="500" height="150">
                             </div>
                         </section>
                     
-                        <section class="what" id="section4">
+                        <section class="what">
+                            <h2 id="what">@ & ?</h2>
 
                             <a href="#" class="button">Default Button</a>
 
@@ -63,6 +68,9 @@
                     
                 </div>       
 
+            </div>
+            
+        </div>
     </section>
 
     

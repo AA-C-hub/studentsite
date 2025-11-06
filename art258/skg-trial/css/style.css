@@ -146,7 +146,7 @@ p{
 
 /* LINKS */
 a{
-    color: var(--color-white);
+    color: var(--color-links);
     text-decoration-color: var(--color-primary-dark);
     text-underline-offset: .2em;
     text-decoration-thickness: .05em;
@@ -472,7 +472,7 @@ html {
 }
 
 section {
-    /* padding-block: var(--unit-l); */
+    padding-block: var(--unit-l);
 }
 
 .hero{
@@ -636,15 +636,15 @@ body > *{
    
     .pagelayout-wrapper-twocolumn{
         display: flex;
-        /* gap: var(--unit-l); */
+        gap: var(--unit-l);
     }
 
     .pagesection-aside{
-        width: auto;
+        width: 25%
     }
 
     .pagesection-maincontent{
-        width: calc(100% - 250px);
+        width: 75%
     }
 
 }
@@ -653,7 +653,7 @@ body > *{
 /* SET INSIDE OF A MEDIA QUERY SO IT ALLOWS THE OVERLAY MENU TO RENDER ON TOP OF SMALL SCREENS */
 @media ( width >= 768px) {
     .stickybox{
-        position: fixed;
+        position: sticky;
         top: var(--unit-s);
     }
 }
@@ -787,7 +787,7 @@ section:has(observe-me){
     display: block;
     margin-left: auto;
     margin-right: auto;
-    transform: translateX(0.5%);
+    transform: translateX(1.38%);
 }
 
 /* --MERCH FOLDER-- */
@@ -795,29 +795,10 @@ section:has(observe-me){
     background-color: var(--color-background-merch);
 }
 
-.head-merch{
-    /* border: 1px solid red; */
+.merch img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.merch1,
-.merch3,
-.merch5 {
-    /* border: 1px solid red; */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translate(60%, 10%);
-}
-.merch2,
-.merch4 {
-    /* border: 1px solid red; */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translate(-60%, 10%);
 }
 
 /* --WHAT FOLDER-- */
@@ -825,67 +806,7 @@ section:has(observe-me){
     background-color: var(--color-background-bottom);
 }
 
-/* SKG Header */
 
-.skg-header {
-    position: fixed;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: flex-end;
-    background: var(--color-yellow);
-    rotate: -90deg;
-    translate: 0 100svh;
-    width: 100svh;
-    height: 50px;
-    transform-origin: left top;
-  }
-  
-  .skg-header a {
-    height: 20px;
-    line-height: 1;
-    padding: 25px;
-    display: block;
-    text-decoration: none;
-  }
-  
-  .skg-header h1 {
-    font-size: 1em;
-    margin: 0;
-  }
-  
-  .skg-header h1 a {
-    background: white;
-  }
-  
-  .skg-header nav ul {
-    display: flex;
-    flex-direction: row-reverse;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .skg-header nav li{
-    /* border: 1px solid red; */
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    margin-left: -10px;
-    
-  }
-  
-  .skg-header li:nth-child(1),
-  #section1 { background-color: var(--color-orange); }
-  .skg-header li:nth-child(2),
-  #section2 { background-color: var(--color-pink-about); }
-  .skg-header li:nth-child(3),
-  #section3 { background-color: var(--color-teal); }
-  .skg-header li:nth-child(4),
-  #section4 { background-color: var(--color-purple-bottom); }
-  
-  main {
-    margin-left: 50px;
-  }
 
 
 
