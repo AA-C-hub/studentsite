@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2431.92 1558.55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1006f;
+        stroke-width: 0px;
+      }
+    </style>
+    <image id="image" width="428" height="355" xlink:href="../../../NMA &apos;25 FALL/ART258/skg-pngs/pink-spark.png"/>
+  </defs>
+  <rect class="cls-1" x="154" y="239.1" width="1920" height="1080"/>
+  <use transform="translate(1 116.1) scale(2.18 1.95)" xlink:href="#image"/>
+  <use transform="translate(1702.67) rotate(34.16) scale(1.71 1.48)" xlink:href="#image"/>
+  <use transform="translate(0 1121.95) rotate(-8.85) scale(1.2 1.04)" xlink:href="#image"/>
+  <use transform="translate(1380 879.42) rotate(-8.85) scale(2.24 1.94)" xlink:href="#image"/>
+</svg>
