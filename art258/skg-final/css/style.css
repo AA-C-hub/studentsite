@@ -930,7 +930,7 @@ section:has(observe-me){
 
 /* FOOTER FOLDER */
 .what {
-    /* background-image: url('../img/footer-bg.svg'); */
+    background-image: url('../img/footer-bg.png');
     background-size: cover;
 }
 
