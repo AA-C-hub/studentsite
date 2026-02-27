@@ -144,13 +144,15 @@ header a {
 }
 
 header a:hover {
-  color: black;
+  color: var(--color-orange);
+  font-weight: 700;
 }
 
 header li:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px var(--color-olive-50);
 }
+
 
 /* SITE ID */
 .site-id h1 {
@@ -449,6 +451,7 @@ header li:hover {
 
 .section {
   padding: 2em;
+  padding-top: 100px;
   margin-bottom: 120px;
 
 }
@@ -610,21 +613,33 @@ main ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 434px;
+  height: 400px;
 }
 
-/* .challenges-paragraph {
-  margin-top: 100px;
-} */
-
-.portfolio-entry section {
-  margin-bottom: 150px;
+.paragraph-section {
+  margin-top: 150px;
 }
 
 .portfolio-entry img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.portfolio-entry {
+  padding: 2.5em;
+}
+
+.gallery {
+  margin-top: 150px;
+}
+
+.gallery-img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 40px;
+  padding-top: 30px;
 }
 
 .final-project-img {
